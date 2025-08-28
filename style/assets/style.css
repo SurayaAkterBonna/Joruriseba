@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #074716; 
+    --gradient-start: #d4edda;
+    --gradient-end: #f8f9fa;
+    --text-dark: #333;
+    --text-light: #555;
+    --card-bg: #fff;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar .left-side {
+    display: flex;
+    color: var(--primary-color);
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .left-side img {
+    height: 30px;
+    width: auto;
+}
+
+.navbar .right-side {
+    display: flex;
+    color: var(--primary-color);
+    align-items: center;
+    gap: 15px;
+}
+
+
+.navbar .icon-text:not(:last-of-type) {
+    background-color: var(--gradient-end);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar .icon-text:last-of-type {
+    background-color: #099129;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.navbar .nav-icon {
+    height: 20px;
+}
+
+
+.hero-section {
+    background: linear-gradient(135deg, #064615 0%, #074716 100%);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-section .logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    color: #fff;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 16px;
+    color: #f0f2f5;
+    margin-top: 10px;
+    line-height: 1.5;
+}
