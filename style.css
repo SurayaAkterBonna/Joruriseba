@@ -85,7 +85,6 @@ body {
     height: 20px;
 }
 
-
 .hero-section {
     background: linear-gradient(135deg, #064615 0%, #074716 100%);
     text-align: center;
@@ -111,7 +110,6 @@ body {
     margin-top: 10px;
     line-height: 1.5;
 }
-
 
 .main-content {
     display: grid;
@@ -172,4 +170,139 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #fce4e4;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.card .fav-icon {
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.card .fav-icon.favorited {
+    color: #ff416c;
+}
+
+.card .details h3 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin: 0;
+    font-weight: 700;
+}
+
+.card .details p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin: 5px 0 0;
+}
+
+.card .hotline-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.card .category-badge {
+    background-color: #f0f2f5;
+    color: var(--text-light);
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.category-and-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card .actions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.card .btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.card .copy-btn {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+}
+
+.card .call-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .card-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar .right-side {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+    .navbar .icon-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+    .card-section {
+        grid-template-columns: 1fr;
+    }
 }
